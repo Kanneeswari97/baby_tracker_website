@@ -1,0 +1,86 @@
+body{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    background: url('../uploads/img5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+h2{
+    margin-top: 20px;
+    color: #333;
+}
+
+.top-buttons{
+    width: 90%;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+.dash-btn{
+    display: inline-block;
+    padding: 10px 18px;
+    background: #6a5acd;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.dash-btn:hover{
+    background: #5848c2;
+}
+
+form{
+    background: white;
+    padding: 20px;
+    width: 400px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button{
+    padding: 10px 20px;
+    background: #87cefa;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover{
+    background: #4db8ff;
+}
+
+table{
+    width: 60%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+table th{
+    background: #87cefa;
+    color: white;
+    padding: 10px;
+}
+
+table td{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover{
+    background: #f5f5f5;
+}

@@ -1,0 +1,70 @@
+body{
+font-family:Arial;
+background: url('../uploads/img11.webp') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+text-align:center;
+margin:0;
+}
+
+h2{
+margin-top:30px;
+}
+
+.feed-box{
+background:white;
+width:400px;
+margin:30px auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+form{
+display:flex;
+flex-direction:column;
+}
+
+label{
+text-align:left;
+margin-top:10px;
+}
+
+input{
+padding:10px;
+margin-top:5px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+margin-top:20px;
+padding:10px;
+background:#87cefa;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#4db8ff;
+}
+
+table{
+width:60%;
+margin:30px auto;
+border-collapse:collapse;
+background:white;
+}
+
+table th{
+background:#87cefa;
+color:white;
+padding:10px;
+}
+
+table td{
+padding:10px;
+border-bottom:1px solid #ddd;
+}

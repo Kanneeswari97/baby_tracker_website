@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vaccination Tracker</title>
+<link rel="stylesheet" href="css/vaccination.css">
+</head>
+
+<body>
+
+<h2>Baby Vaccination Tracker</h2>
+<form action="php/save_vaccination.php" method="POST">
+
+<input type="text" name="vaccine" placeholder="Vaccine Name">
+
+<input type="date" name="date">
+
+<select name="status">
+<option>Done</option>
+<option>Pending</option>
+</select>
+
+<button type="submit">Save</button>
+
+</form>
+
+<table>
+
+<tr>
+<th>Vaccine</th>
+<th>Due Date</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>BCG</td>
+<td>05 Jan 2025</td>
+<td>Done</td>
+</tr>
+
+<tr>
+<td>Polio</td>
+<td>05 Feb 2025</td>
+<td>Pending</td>
+</tr>
+
+<tr>
+<td>DPT</td>
+<td>05 Mar 2025</td>
+<td>Pending</td>
+</tr>
+
+</table>
+
+</body>
+</html>

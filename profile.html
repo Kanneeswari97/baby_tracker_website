@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Baby Profile</title>
+<link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+<h2>Baby Profile</h2>
+
+<div class="profile-box">
+
+<form action="php/save_profile.php" method="POST" enctype="multipart/form-data">
+
+<input type="text" name="name" placeholder="Baby Name" required>
+
+<input type="date" name="dob">
+
+<select name="gender">
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select>
+
+<input type="text" name="weight" placeholder="Weight">
+
+<input type="text" name="height" placeholder="Height">
+
+<input type="text" name="blood" placeholder="Blood Group">
+
+<input type="text" name="parent" placeholder="Parent Name">
+
+<input type="file" name="image">
+
+<button type="submit">Save Profile</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
