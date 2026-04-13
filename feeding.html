@@ -6,45 +6,29 @@
 </head>
 
 <body>
-
 <h2>Baby Feeding Tracker</h2>
 
 <div class="feed-box">
 
 <form action="php/save_feeding.php" method="POST">
 
-<input type="time" name="time" placeholder="Fill the time">
+<label>Time</label>
+<input type="time" name="time" required>
 
-<input type="text" name="food" placeholder="fill the food">
+<label>Food</label>
+<input type="text" name="food" required>
 
-<input type="text" name="quantity" placeholder="Fill the quantity">
+<label>Quantity (ml)</label>
+<input type="text" name="quantity" required>
 
-<input type="text" name="notes" placeholder="fill the notes">
+<label>Notes</label>
+<input type="text" name="notes">
 
 <button type="submit">Add Record</button>
 
 </form>
 
 </div>
-
-
-<table>
-
-<tr>
-<th>Time</th>
-<th>Food</th>
-<th>Quantity</th>
-<th>Notes</th>
-</tr>
-
-<tr>
-<td>8:00 AM</td>
-<td>Milk</td>
-<td>200 ml</td>
-<td>Good</td>
-</tr>
-
-</table>
 
 </body>
 </html>

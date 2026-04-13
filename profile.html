@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Baby Profile</title>
-<link rel="stylesheet" href="css/profile.css">
+    <title>Create Baby Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 
 <body>
 
-<h2>Baby Profile</h2>
+<div class="top-buttons">
+    <a href="dashboard.html" class="dash-btn">← Back to Dashboard</a>
+</div>
+
+<h2>Create Baby Profile</h2>
 
 <div class="profile-box">
 
@@ -15,22 +19,22 @@
 
 <input type="text" name="name" placeholder="Baby Name" required>
 
-<input type="date" name="dob">
+<input type="date" name="dob" required>
 
 <select name="gender">
 <option value="Male">Male</option>
 <option value="Female">Female</option>
 </select>
 
-<input type="text" name="weight" placeholder="Weight">
+<input type="text" name="weight" placeholder="Weight" required>
 
-<input type="text" name="height" placeholder="Height">
+<input type="text" name="height" placeholder="Height" required>
 
 <input type="text" name="blood" placeholder="Blood Group">
 
 <input type="text" name="parent" placeholder="Parent Name">
 
-<input type="file" name="image">
+<input type="file" name="image" required>
 
 <button type="submit">Save Profile</button>
 

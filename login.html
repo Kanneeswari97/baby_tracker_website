@@ -4,24 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+
     <link rel="stylesheet" href="css/login.css">
+
+    <style>
+        #errorMsg {
+            color: rgb(249, 115, 115);
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
 
-    <div class="login-container">
-        <form class="login-box" action="php/login.php" method="POST">
-            <h2>Login</h2>
+<div class="login-container">
 
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <input type="password" name="password" placeholder="Enter your password" required>
+    <form class="login-box" action="php/login.php" method="POST">
 
-            <button type="submit">Login</button>
+        <h2>Login</h2>
+        
 
-            <p class="register-text">
-                Don't have an account? <a href="register.html">Register</a>
-            </p>
-        </form>
-    </div>
+        <!--  Error Message Show Here -->
+        <div id="errorMsg"></div>
+        <br>
+
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <input type="password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit">Login</button>
+
+        <p class="register-text">
+            <br>
+            Don't have an account? <a href="register.html">Register</a>
+        </p>
+
+    </form>
+
+</div>
+
+<!-- JavaScript for error handling -->
+<script>
+const params = new URLSearchParams(window.location.search);
+const error = params.get("error");
+
+let message = "";
+
+if(error === "empty")
+{
+    message = "Please enter email and password";
+}
+else if(error === "wrongpassword")
+{
+    message = "Invalid password";
+}
+else if(error === "nouser")
+{
+    message = "Don't have an account? Please register!";
+}
+
+document.getElementById("errorMsg").innerText = message;
+</script>
 
 </body>
 </html>

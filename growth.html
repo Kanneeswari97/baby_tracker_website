@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Growth Tracker</title>
+<link rel="stylesheet" href="css/growth.css">
+</head>
+
+<body>
+
+<div class="top-buttons">
+
+    <a href="dashboard.html" class="dash-btn">← Back to Dashboard</a>
+    
+</div>
+
+<h2>Baby Growth Tracker</h2>
+
+<div class="form-box">
+<form action="php/growth.php" method="POST">
+
+<label>Baby Date of Birth (DOB)</label>
+<input type="date" name="dob" required>
+
+
+<label>Current Date</label>
+<input type="date" name="date" required>
+
+
+<label>Weight (kg)</label>
+<input type="number" step="0.1" name="weight" required>
+
+
+<label>Height (cm)</label>
+<input type="number" step="0.1" name="height" required>
+
+<button type="submit">Add Record</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

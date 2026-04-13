@@ -1,17 +1,26 @@
 <?php
-// php/save_feeding.php
+session_start();
 include("db.php");
 
-$time = $_POST['time'] ?? null;
-$food = $_POST['food'] ?? '';
-$quantity = $_POST['quantity'] ?? '';
-$notes = $_POST['notes'] ?? '';
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../login.html");
+    exit();
+}
 
-$stmt = mysqli_prepare($conn, "INSERT INTO feeding_tracker (time, food, quantity, notes) VALUES (?, ?, ?, ?)");
-mysqli_stmt_bind_param($stmt, "ssss", $time, $food, $quantity, $notes);
+$user_id = $_SESSION['user_id'];
+
+$time = $_POST['time'];
+$food = $_POST['food'];
+$quantity = $_POST['quantity'];
+$notes = $_POST['notes'];
+
+//  CURRENT DATE
+$date = date("Y-m-d");
+
+$stmt = mysqli_prepare($conn, "INSERT INTO feeding_tracker (user_id, date, time, food, quantity, notes) VALUES (?, ?, ?, ?, ?, ?)");
+mysqli_stmt_bind_param($stmt, "isssss", $user_id, $date, $time, $food, $quantity, $notes);
 mysqli_stmt_execute($stmt);
-mysqli_stmt_close($stmt);
 
-header("Location: ../php/feeding_list.php");
+header("Location: feeding_list.php");
 exit();
 ?>

@@ -1,55 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vaccination Tracker</title>
 <link rel="stylesheet" href="css/vaccination.css">
 </head>
 
 <body>
 
-<h2>Baby Vaccination Tracker</h2>
-<form action="php/save_vaccination.php" method="POST">
+<div class="container">
+    <h2> Vaccination Tracker</h2>
 
-<input type="text" name="vaccine" placeholder="Vaccine Name">
+    <form action="php/save_vaccination.php" method="POST">
+        <label>Vaccine Name</label>
+        <input type="text" name="vaccine" required>
 
-<input type="date" name="date">
+        <label>Due Date</label>
+        <input type="date" name="due_date" required>
 
-<select name="status">
-<option>Done</option>
-<option>Pending</option>
-</select>
+        <button type="submit">Add Vaccine</button>
+    </form>
 
-<button type="submit">Save</button>
-
-</form>
-
-<table>
-
-<tr>
-<th>Vaccine</th>
-<th>Due Date</th>
-<th>Status</th>
-</tr>
-
-<tr>
-<td>BCG</td>
-<td>05 Jan 2025</td>
-<td>Done</td>
-</tr>
-
-<tr>
-<td>Polio</td>
-<td>05 Feb 2025</td>
-<td>Pending</td>
-</tr>
-
-<tr>
-<td>DPT</td>
-<td>05 Mar 2025</td>
-<td>Pending</td>
-</tr>
-
-</table>
+    <br>
+    <a href="dashboard.html" class="back"> Back to Dashboard</a>
+</div>
 
 </body>
 </html>
